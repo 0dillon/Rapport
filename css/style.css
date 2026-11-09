@@ -203,7 +203,6 @@ a:hover { color: var(--blue-hover); text-decoration-thickness: 2px; }
 }
 .section { padding-block: var(--section-y); }
 .section--paper + .section--paper { padding-top: 0; }
-.hero + .section { padding-top: var(--s-5); }
 
 .grid {
   display: grid;
@@ -399,7 +398,7 @@ body:has(.hero) * + .actions { margin-top: 20px; }
 /* ---------- Hero (Home) ---------- */
 .hero {
   padding-top: var(--s-6);
-  padding-bottom: var(--s-5);
+  padding-bottom: var(--s-6);
   position: relative;
 }
 .hero .grid { align-items: center; row-gap: var(--s-5); }
@@ -436,14 +435,21 @@ body:has(.hero) * + .actions { margin-top: 20px; }
   }
 }
 @media (min-width: 768px) {
-  .hero { padding-top: 36px; padding-bottom: var(--s-5); }
+  .hero {
+    min-height: calc(100vh - var(--header-h));
+    min-height: calc(100dvh - var(--header-h));
+    display: flex;
+    align-items: center;
+    padding-top: var(--s-6);
+    padding-bottom: var(--s-6);
+    box-sizing: border-box;
+  }
+  .hero .container { width: 100%; }
   .hero-text { grid-column: 1 / span 7; }
   .hero-visual { grid-column: 8 / span 5; max-width: 360px; justify-self: end; }
 }
 @media (min-width: 1024px) {
-  .hero { padding-top: 36px; padding-bottom: var(--s-5); }
-  .hero-text { grid-column: 1 / span 7; }
-  .hero-visual { grid-column: 8 / span 5; max-width: 420px; justify-self: end; }
+  .hero-visual { max-width: 420px; }
 }
 
 /* ---------- Audience Cards (Home) ---------- */
