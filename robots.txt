@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace https://rapport.ng with the live domain
+Sitemap: https://rapport.ng/sitemap.xml
