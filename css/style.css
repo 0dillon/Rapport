@@ -74,7 +74,7 @@
   --pad: 24px;
   --gutter: 24px;
   --section-y: 72px;
-  --header-h: 80px;
+  --header-h: 64px;
   --tabs-h: 56px;
 
   /* Geometry & Natural Depth (No AI Glow Halos) */
@@ -397,7 +397,7 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
 
 /* ---------- Hero (Home) ---------- */
 .hero {
-  padding-top: var(--s-6);
+  padding-top: var(--s-4);
   padding-bottom: var(--s-6);
   position: relative;
 }
@@ -431,18 +431,18 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
 @media (max-width: 767px) {
   .hero-visual {
     margin-top: var(--s-5);
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 @media (min-width: 768px) {
-  .hero { padding-top: var(--s-7); padding-bottom: var(--s-7); }
+  .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
   .hero-text { grid-column: 1 / span 7; }
-  .hero-visual { grid-column: 8 / span 5; max-width: 380px; justify-self: end; }
+  .hero-visual { grid-column: 8 / span 5; max-width: 360px; justify-self: end; }
 }
 @media (min-width: 1024px) {
-  .hero { padding-top: var(--s-7); padding-bottom: var(--s-8); }
+  .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
   .hero-text { grid-column: 1 / span 6; }
-  .hero-visual { grid-column: 7 / span 6; max-width: 520px; justify-self: end; }
+  .hero-visual { grid-column: 7 / span 6; max-width: 460px; justify-self: end; }
 }
 
 /* ---------- Audience Cards (Home) ---------- */
