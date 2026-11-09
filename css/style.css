@@ -412,58 +412,38 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
 }
 .hero-text > * + * { margin-top: var(--s-4); }
 
-/* Architectural Hero Frame for Mark (Zero Radial Glow) */
-.hero-mark-frame {
+/* Hero Visual (Custom Branded Illustration) */
+.hero-visual {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 340px;
+  max-width: 320px;
   margin-inline: auto;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
-  background: var(--paper-elevated);
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 3px rgba(11, 27, 63, 0.04);
-  padding: var(--s-6);
-  position: relative;
 }
-/* Subtle architectural registration guide */
-.hero-mark-frame::before {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px dashed rgba(11, 27, 63, 0.08);
-  border-radius: 12px;
-  pointer-events: none;
-}
-.hero-mark {
-  width: 135px;
+.hero-img {
+  display: block;
+  width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
+@media (max-width: 767px) {
+  .hero-visual {
+    margin-top: var(--s-5);
+    max-width: 300px;
+  }
+}
 @media (min-width: 768px) {
   .hero { padding-top: var(--s-7); padding-bottom: var(--s-7); }
-  .hero-mark { width: 160px; }
-  .hero-mark-frame { max-width: 380px; }
+  .hero-text { grid-column: 1 / span 7; }
+  .hero-visual { grid-column: 8 / span 5; max-width: 380px; justify-self: end; }
 }
 @media (min-width: 1024px) {
   .hero { padding-top: var(--s-7); padding-bottom: var(--s-8); }
-  .hero-text { grid-column: 1 / span 7; }
-  .hero-mark-frame { grid-column: 8 / span 5; margin-inline: 0; justify-self: end; }
+  .hero-text { grid-column: 1 / span 6; }
+  .hero-visual { grid-column: 7 / span 6; max-width: 520px; justify-self: end; }
 }
-
-/* Mark Assembly Animation */
-.mark-head, .mark-dot { transform-box: fill-box; transform-origin: center; }
-.mark-head { animation: head-settle 0.4s var(--ease) both; }
-.ring-draw { stroke-dasharray: 1.02 1.02; stroke-dashoffset: 0; animation: ring-draw 0.6s 0.25s cubic-bezier(0.65, 0, 0.35, 1) both; }
-.mark-dot { animation: dot-in 0.18s var(--ease) both; }
-.mark-dot:nth-of-type(1) { animation-delay: 0.8s; }
-.mark-dot:nth-of-type(2) { animation-delay: 0.9s; }
-.mark-dot:nth-of-type(3) { animation-delay: 1.0s; }
-@keyframes head-settle { from { transform: translateY(-24px); opacity: 0; } }
-@keyframes ring-draw { from { stroke-dashoffset: 1.02; } }
-@keyframes dot-in { from { transform: scale(0.3); opacity: 0; } }
 
 /* ---------- Audience Cards (Home) ---------- */
 .audiences {
