@@ -244,7 +244,7 @@ body:has(.hero) .head + * { margin-top: var(--s-5); }
   body:has(.hero) .head + * { margin-top: var(--s-6); }
 }
 .page-home * + .actions,
-body:has(.hero) * + .actions { margin-top: var(--s-5); }
+body:has(.hero) * + .actions { margin-top: var(--s-4); }
 
 /* ---------- Buttons (Tactile & Solid, Zero AI Glow) ---------- */
 .btn {
@@ -397,20 +397,20 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
 
 /* ---------- Hero (Home) ---------- */
 .hero {
-  padding-top: var(--s-4);
+  padding-top: var(--s-3);
   padding-bottom: var(--s-6);
   position: relative;
 }
-.hero .grid { align-items: center; row-gap: var(--s-6); }
+.hero .grid { align-items: center; row-gap: var(--s-5); }
 .hero-text { grid-column: 1 / -1; }
-.hero-text h1 { max-width: 16ch; }
+.hero-text h1 { max-width: 24ch; }
 .hero-text .t-lead {
-  max-width: 54ch;
+  max-width: 52ch;
   color: var(--navy-muted);
   font-size: var(--fs-lead);
-  line-height: 1.62;
+  line-height: 1.55;
 }
-.hero-text > * + * { margin-top: var(--s-4); }
+.hero-text > * + * { margin-top: var(--s-3); }
 
 /* Hero Visual (Custom Branded Illustration) */
 .hero-visual {
@@ -418,7 +418,7 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   margin-inline: auto;
 }
 .hero-img {
@@ -430,19 +430,19 @@ body:has(.hero) * + .actions { margin-top: var(--s-5); }
 
 @media (max-width: 767px) {
   .hero-visual {
-    margin-top: var(--s-5);
-    max-width: 280px;
+    margin-top: var(--s-4);
+    max-width: 260px;
   }
 }
 @media (min-width: 768px) {
-  .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
+  .hero { padding-top: var(--s-4); padding-bottom: var(--s-6); }
   .hero-text { grid-column: 1 / span 7; }
   .hero-visual { grid-column: 8 / span 5; max-width: 360px; justify-self: end; }
 }
 @media (min-width: 1024px) {
-  .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
-  .hero-text { grid-column: 1 / span 6; }
-  .hero-visual { grid-column: 7 / span 6; max-width: 460px; justify-self: end; }
+  .hero { padding-top: var(--s-4); padding-bottom: var(--s-6); }
+  .hero-text { grid-column: 1 / span 7; }
+  .hero-visual { grid-column: 8 / span 5; max-width: 420px; justify-self: end; }
 }
 
 /* ---------- Audience Cards (Home) ---------- */
