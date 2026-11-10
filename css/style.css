@@ -412,7 +412,7 @@ body:has(.hero) * + .actions { margin-top: 20px; }
 }
 .hero-text > * + * { margin-top: 14px; }
 
-/* Hero Visual (Custom Branded Illustration) */
+/* Hero Visual (Custom Branded Illustration with Ambient Living Motion) */
 .hero-visual {
   display: flex;
   align-items: center;
@@ -426,6 +426,38 @@ body:has(.hero) * + .actions { margin-top: 20px; }
   width: 100%;
   height: auto;
   max-width: 100%;
+  will-change: transform;
+  animation: hero-appear 0.8s var(--ease) both, hero-float 6s 0.8s ease-in-out infinite;
+  transition: transform 0.4s var(--ease);
+}
+.hero-visual:hover .hero-img {
+  transform: translateY(-10px) scale(1.015);
+}
+
+@keyframes hero-appear {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-img {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 767px) {
