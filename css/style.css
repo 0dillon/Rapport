@@ -605,6 +605,9 @@ body:has(.hero) * + .actions { margin-top: 20px; }
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--gutter);
   }
+  .reviews-grid > .review-card {
+    grid-column: auto;
+  }
 }
 .review-card {
   margin: 0;
